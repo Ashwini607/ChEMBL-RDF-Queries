@@ -1,0 +1,7 @@
+# It will work on any sparql-endpoint but good to have rdf prefix with this query.
+# a is used for rdf:type.
+
+SELECT ?subject ?object
+WHERE{ 
+  ?subject a ?object 
+}

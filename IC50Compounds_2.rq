@@ -1,0 +1,25 @@
+# Retrieve chembl molecules having IC50 bioactivity value in nM.
+# have not used filter but still able to get a column having standered type and
+# standered unit with variable column name.
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX cco: <http://rdf.ebi.ac.uk/terms/chembl#>
+
+
+SELECT  ?chembl_id  ?std_value "nm"  "IC50" 
+WHERE {
+  ?molecule cco:hasActivity ?Activity.
+  ?Activity cco:standardValue ?std_value .
+  ?Activity cco:standardUnits "nM" .
+  ?Activity cco:standardType "IC50" .
+  ?molecule rdfs:label ?chembl_id .  
+}

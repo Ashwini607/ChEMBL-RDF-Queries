@@ -1,0 +1,37 @@
+# Retrieve chembl molecules activity details for target a protein of interest.
+# Protein of interest is human M2 muscarinic receptor (P08172)
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX cco: <http://rdf.ebi.ac.uk/terms/chembl#>
+PREFIX bibo: <http://purl.org/ontology/bibo/>
+
+
+SELECT ?chembl_id ?std_value ?std_unit ?pub_id ?std_type  ?assy_description ?tar ?title ?tarTyp
+WHERE {
+  ?molecule cco:hasActivity ?act.
+  ?act cco:hasDocument ?doc.
+  OPTIONAL{?act cco:standardValue ?std_value .}
+  OPTIONAL{?act cco:standardUnits ?std_unit .}
+  OPTIONAL{?act cco:standardType ?std_type .}
+  ?doc bibo:pmid ?pub_id.
+  ?molecule rdfs:subClassOf cco:Substance. 
+  ?molecule rdfs:label ?chembl_id.
+  ?act cco:hasAssay ?ass.
+  ?ass dcterms:description ?assy_description.
+  ?ass cco:hasTarget ?tar.
+  ?tar dcterms:title ?title.
+  ?tar cco:targetType ?tarTyp.
+  ?tar cco:hasTargetComponent ?tc.
+  ?tc skos:exactMatch ?em.
+  ?em rdfs:label ?uniref.
+  FILTER regex(?uniref ,"P08172")  
+}

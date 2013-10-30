@@ -1,0 +1,28 @@
+# Retrieve chembl molecules having IC50 bioactivity value in nM.
+# using filter to select specific pattern matching and print the columns that contain that
+# value. Filter is not required for our result, and time taken by this query is more. 
+# Filter can use in a single line or in separate line.
+ 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX cco: <http://rdf.ebi.ac.uk/terms/chembl#>
+
+
+SELECT  ?chembl_id  ?std_value ?std_unit  ?std_type
+WHERE {
+  ?molecule cco:hasActivity ?Activity.
+  ?Activity cco:standardValue ?std_value .
+  ?Activity cco:standardUnits ?std_unit .
+  ?Activity cco:standardType ?std_type .
+  ?molecule rdfs:label ?chembl_id .
+  FILTER (regex(?std_unit , "nM") && regex(?std_type, "IC50" )).  
+}
+
