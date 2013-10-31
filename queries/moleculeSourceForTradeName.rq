@@ -1,5 +1,5 @@
-# If we know only the molecule name as “sildenafil”, how could we find the chembl molecule?
-# it will give the molecules nameincluded sildenafil. You can also use skos:prefLabel at place of skos:altLabel but not sure that will contain this name or any other name of same molecule. 
+# Retrieve the ChEMBL molecule based on name "sildenafil"
+# You can also use skos:prefLabel at the place of skos:altLabel but not sure that will contain this name or any other preferd name of same molecule. 
 
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
