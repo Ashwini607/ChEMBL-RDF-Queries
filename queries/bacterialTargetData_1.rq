@@ -1,4 +1,4 @@
-# Retrieve all the bioactive chembl molecules for bacterial target.
+# Retrieve all the bioactive ChEMBL molecules for bacterial target.
 # I have used filter to select molecule that is not necessary. We can put name of organism "Bacteria" at 
 # variable, but to select a extra column having bacteria gives satisfaction for correct query. Filter makes more time consuming query.
 
