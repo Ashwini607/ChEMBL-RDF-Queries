@@ -1,0 +1,7 @@
+# Retrieve the properties
+# a is equivalent to rdf:type URI
+
+SELECT ?property
+WHERE {
+    ?property  a  rdf:Property . 
+}

@@ -1,0 +1,4 @@
+# Retrieve the relation with source (URI)
+# Put any URI from using triple store   
+ 
+ DESCRIBE<URI> 

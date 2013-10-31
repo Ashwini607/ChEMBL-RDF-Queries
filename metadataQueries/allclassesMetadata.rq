@@ -1,0 +1,10 @@
+# Retrive all declared classes.
+# a is equivalent to rdf:type URI
+
+PREFIX  owl: <http://www.w3.org/2002/07/owl#>
+
+
+SELECT ?class
+WHERE {
+    ?class a owl:Class . 
+}

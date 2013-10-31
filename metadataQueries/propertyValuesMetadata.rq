@@ -1,0 +1,10 @@
+# Retrieve values has been associated with given property
+# Put the name of prefix at the place of xyz and given property name at someProperty
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+
+SELECT DISTINCT ?propertyValue
+WHERE {
+   ?o xyz:someProperty ?propertyValue
+}

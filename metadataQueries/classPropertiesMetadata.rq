@@ -1,0 +1,12 @@
+# Retrieve properties have been associated for a given class 
+# Put the name of prefix at the place of xyz and given class name at someClass 
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+
+SELECT ?class
+WHERE {
+ ?property rdfs:domain  xyz:SomeClass . 
+}
+
+
