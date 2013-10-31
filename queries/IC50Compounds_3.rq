@@ -1,4 +1,4 @@
-# Retrieve chembl molecules having activity standard type "IC50"
+# Retrieve ChEMBL molecules having activity standard type "IC50"
 # and activity standered unit "nM". Here able to produce fixed text column for 
 # standered type and standered unit.
 
@@ -15,11 +15,11 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX cco: <http://rdf.ebi.ac.uk/terms/chembl#>
 
 
-SELECT  ?chembl_id  ?std_value  ("nm" as ?std_unit)  ("IC50" as ?std_typ) 
+SELECT  ?ChEMBL_id  ?std_value  ("nm" as ?std_unit)  ("IC50" as ?std_typ) 
 WHERE {
   ?molecule cco:hasActivity ?Activity.
   ?Activity cco:standardValue ?std_value .
   ?Activity cco:standardUnits "nM" .
   ?Activity cco:standardType "IC50" .
-  ?molecule rdfs:label ?chembl_id .  
+  ?molecule rdfs:label ?ChEMBL_id .  
 }
