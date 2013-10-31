@@ -1,5 +1,5 @@
-# query to obtain the logp value of chembl molecule having chembl-ID "CHEMBL192"
-# first searched the properties of chembl molecule and then selected the URI from object of molecule which gives the logpvalue
+# query to obtain the logp value of ChEMBL molecule having ChEMBL-ID "CHEMBL192"
+# first searched the properties of ChEMBL molecule and then selected the URI from object of molecule which gives the logpvalue
 
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
