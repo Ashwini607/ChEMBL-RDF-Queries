@@ -1,4 +1,4 @@
-#- Can we find the molecular formula in the triple store? 
+# Retrieve molecular formula of known ChEMBL molecule. Here molecule is "CHEMBL192". 
 
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
