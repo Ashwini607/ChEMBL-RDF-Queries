@@ -1,4 +1,4 @@
-# Retrieve chembl molecule, target details, protein sequence, and uniprot reference for proteins target
+# Retrieve ChEMBL molecule, target details, protein sequence, and uniprot reference for proteins target
 
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -13,11 +13,11 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX cco: <http://rdf.ebi.ac.uk/terms/chembl#>
 
 
-SELECT ?chembl_id ?tar ?title ?tarTyp  ?protSeq ?uniref
+SELECT ?ChEMBL_id ?tar ?title ?tarTyp  ?protSeq ?uniref
 WHERE {  
   ?molecule cco:hasActivity ?act.
   ?molecule rdfs:subClassOf cco:Substance. 
-  ?molecule rdfs:label ?chembl_id.
+  ?molecule rdfs:label ?ChEMBL_id.
   ?act cco:hasAssay ?ass.
   ?Ass cco:hasTarget ?tar.
   ?tar dcterms:title ?title.
