@@ -19,9 +19,9 @@ PREFIX cco: <http://rdf.ebi.ac.uk/terms/chembl#>
 SELECT  ?ChEMBL_id  ?std_value ?std_unit  ?std_type
 WHERE {
   ?molecule cco:hasActivity ?Activity.
-  OPTIONAL{?act cco:standardValue ?std_value .}
-  OPTIONAL{?act cco:standardUnits ?std_unit .}
-  OPTIONAL{?act cco:standardType ?std_type .}
+  ?Activity cco:standardValue ?std_value .
+  ?Activity cco:standardUnits "nM" .
+  ?Activity cco:standardType "IC50" .
   ?molecule rdfs:label ?ChEMBL_id .
   FILTER (regex(?std_unit , "nM") && regex(?std_type, "IC50" )).  
 }
