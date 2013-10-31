@@ -1,4 +1,4 @@
-# Retrieve chembl molecules activity details for target a protein of interest.
+# Retrieve ChEMBL molecules activity details for target a protein of interest.
 # Protein of interest is human M2 muscarinic receptor (P08172)
 
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -15,7 +15,7 @@ PREFIX cco: <http://rdf.ebi.ac.uk/terms/chembl#>
 PREFIX bibo: <http://purl.org/ontology/bibo/>
 
 
-SELECT ?chembl_id ?std_value ?std_unit ?pub_id ?std_type  ?assy_description ?tar ?title ?tarTyp
+SELECT ?ChEMBL_id ?std_value ?std_unit ?pub_id ?std_type  ?assy_description ?tar ?title ?tarTyp
 WHERE {
   ?molecule cco:hasActivity ?act.
   ?act cco:hasDocument ?doc.
@@ -24,7 +24,7 @@ WHERE {
   OPTIONAL{?act cco:standardType ?std_type .}
   ?doc bibo:pmid ?pub_id.
   ?molecule rdfs:subClassOf cco:Substance. 
-  ?molecule rdfs:label ?chembl_id.
+  ?molecule rdfs:label ?ChEMBL_id.
   ?act cco:hasAssay ?ass.
   ?ass dcterms:description ?assy_description.
   ?ass cco:hasTarget ?tar.
