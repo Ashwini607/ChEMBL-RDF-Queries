@@ -1,4 +1,4 @@
-# Retrieve chembl molecules targeting “Firefly Luciferase”
+# Retrieve ChEMBL molecules targeting “Firefly Luciferase”
 
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -13,10 +13,10 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX cco: <http://rdf.ebi.ac.uk/terms/chembl#>
 
 
-SELECT DISTINCT ?chembl_id ?label
+SELECT DISTINCT ?ChEMBL_id ?label
 WHERE {
   ?molecule rdfs:subClassOf cco:Substance.  
-  ?molecule rdfs:label ?chembl_id .
+  ?molecule rdfs:label ?ChEMBL_id .
   ?molecule cco:hasActivity ?act.
   ?act cco:hasAssay ?ass.
   ?ass cco:hasTarget ?tar.
