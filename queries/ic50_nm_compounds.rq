@@ -1,4 +1,4 @@
-# Retrieve all the chembl molecules having IC50 bioactivity value in nM.
+# Retrieve all the ChEMBL molecules having IC50 bioactivity value in nM.
 # Used filter to select pattern matching columns which contain that
 # value. Filter is not required for our result. You can put the known value at variable place . 
 
@@ -15,14 +15,14 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX cco: <http://rdf.ebi.ac.uk/terms/chembl#>
 
 
-SELECT  ?chembl_id  ?std_value ?std_unit  ?std_type
+SELECT  ?ChEMBL_id  ?std_value ?std_unit  ?std_type
 WHERE {
   ?molecule cco:hasActivity ?Activity.
   ?molecule rdfs:subClassOf cco:Substance. 
   ?Activity cco:standardValue ?std_value .
   ?Activity cco:standardUnits ?std_unit .
   ?Activity cco:standardType ?std_type .
-  ?molecule rdfs:label ?chembl_id .
+  ?molecule rdfs:label ?ChEMBL_id .
   FILTER regex(?std_unit , "nM"). 
   FILTER regex(?std_type, "IC50") .
 }
