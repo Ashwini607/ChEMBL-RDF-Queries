@@ -1,4 +1,4 @@
-# Retrieve chembl molecules having IC50 bioactivity value in nM.
+# Retrieve ChEMBL molecules having IC50 bioactivity value in nM.
 # have not used filter but still able to get a column having standered type and
 # standered unit with variable column name.
 
@@ -15,11 +15,11 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX cco: <http://rdf.ebi.ac.uk/terms/chembl#>
 
 
-SELECT  ?chembl_id  ?std_value "nm"  "IC50" 
+SELECT  ?ChEMBL_id  ?std_value "nm"  "IC50" 
 WHERE {
   ?molecule cco:hasActivity ?Activity.
   ?Activity cco:standardValue ?std_value .
   ?Activity cco:standardUnits "nM" .
   ?Activity cco:standardType "IC50" .
-  ?molecule rdfs:label ?chembl_id .  
+  ?molecule rdfs:label ?ChEMBL_id .  
 }
