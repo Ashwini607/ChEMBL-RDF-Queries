@@ -1,6 +1,6 @@
-# Retrieve all the bioactive chembl molecule for bacterial target.
+# Retrieve all the bioactive ChEMBL molecule for bacterial target.
 # I have added a extra constant text column "orgName" to show the taget is bacteria. 
-# Extra column is not necessary but sometime makes clarity in output like if I have selected chembl molecule for many targets then extra column help to differentiate 
+# Extra column is not necessary but sometime makes clarity in output like if I have selected ChEMBL molecule for many targets then extra column help to differentiate 
 # among them.
 
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
