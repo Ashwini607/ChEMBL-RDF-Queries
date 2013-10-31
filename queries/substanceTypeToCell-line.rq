@@ -1,4 +1,4 @@
-# Retrieve list of chambel molecule(or substance) types, which have target type "cell-line".
+# Retrieve list of ChEMBL molecule(or substance) types, which have target type "cell-line".
 
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
