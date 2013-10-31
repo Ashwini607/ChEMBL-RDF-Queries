@@ -1,4 +1,4 @@
-# Retrieve all the bioactive chembl molecule for bacterial target
+# Retrieve all the bioactive ChEMBL molecule for bacterial target
 
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
