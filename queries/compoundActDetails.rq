@@ -1,4 +1,4 @@
-# Retrieve chembl molecule activity details for all target
+# Retrieve ChEMBL molecule activity details for all target
 
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -13,11 +13,11 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX cco: <http://rdf.ebi.ac.uk/terms/chembl#>
 
 
-SELECT ?chembl_id ?std_value ?std_unit ?std_type ?std_rel ?ass_disc
+SELECT ?ChEMBL_id ?std_value ?std_unit ?std_type ?std_rel ?ass_disc
 WHERE {
   ?molecule cco:hasActivity ?act.
   ?molecule rdfs:subClassOf cco:Substance. 
-  ?molecule rdfs:label ?chembl_id .
+  ?molecule rdfs:label ?ChEMBL_id .
   ?act cco:hasAssay ?ass.
   ?act cco:standardValue ?std_value .
   ?act cco:standardUnits ?std_unit .
