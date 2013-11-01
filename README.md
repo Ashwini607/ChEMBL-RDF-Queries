@@ -76,3 +76,11 @@ Note: Try to avoid the use of filter function in SPARQL query, because it takes 
 - [Retrieve the properties]( https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/metadataQueries/propertiesMetadata.rq)
 - [Retrieve values has been associated with given property]( https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/metadataQueries/propertyValuesMetadata.rq)
 - [Retrieve the service description of the endpoint]( https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/metadataQueries/serviceDescriptionMetadata.rq )
+
+
+# Fedarated SPARQL query or other than ChEMBL endpoint query
+
+1. [Retrieve known diseases from uniprot](https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/federatedAndOthersEndpointQueries/knownDisUp.rq)
+2. [Retrieve the proteins and their sequence involved in Alzheimer disease (Runs on ChEMBL SPARQL endpoint)](https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/federatedAndOthersEndpointQueries/proteinRelatedToAlzheimerChEMBL_up.rq)
+3. [Retrieve the proteins and their sequence involved in Alzheimer disease (Runs on UniProt SPARQL endpoint)](https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/federatedAndOthersEndpointQueries/ proteinsRelatedToAlzheimerUp.rq)
+4. [Retrieve total number of known diseases in uniprot](https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/federatedAndOthersEndpointQueries/totKnownDisUp.rq)
