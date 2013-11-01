@@ -1,4 +1,4 @@
-# Retrieve the ChEMBL molecule based on name "sildenafil"
+# Retrieve the ChEMBL molecule based on name. Here name is "sildenafil".
 # You can also use skos:prefLabel at the place of skos:altLabel but not sure that will contain this name or any other preferd name of same molecule. 
 
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
