@@ -54,7 +54,7 @@ new column having constant text "IC50" without filter. These differences make ch
 
 Note: Try to avoid the use of filter function in SPARQL query, because it takes more time for running.
 
-- [Retrieve ChEMBL molecules ChEMBL-ID, activity standard type, activity standard unit having activity standard type "IC50" and standard unit "nM" using filter]( https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/queries/IC50Compounds.rq)
+1. [Retrieve ChEMBL molecules ChEMBL-ID, activity standard type, activity standard unit having activity standard type "IC50" and standard unit "nM" using filter]( https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/queries/IC50Compounds.rq)
 - [Retrieve ChEMBL molecules ChEMBL-ID having activity standard type "IC50" and activity standard unit "nM"](https://github.com/Ashwini607/ChEMBL-RDF Queries/tree/master/queries/IC50Compounds_1.rq)
 - [Retrieve ChEMBL molecules ChEMBL-ID having activity standard type "IC50" and activity standard unit "nM" having extra columns with variable name that contain constant text about standard type and standard unit](https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/queries/IC50Compounds_2.rq)
 - [Retrieve ChEMBL molecules ChEMBL-ID having activity standard type "IC50" and activity standard unit "nM" having extra columns that contains constant text about standard type and standard unit](https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/queries/IC50Compounds_3.rq)
@@ -65,7 +65,7 @@ Note: Try to avoid the use of filter function in SPARQL query, because it takes 
 
  If you are new in querying RDF triple store then you can try these queries, because these work on any SPARQL endpoint. It will help to get familiar with contains of triple store.  
  
-- [Retrieve all available triples from triple store]( https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/metadataQueries/metadataQuery1.rq)
+1. [Retrieve all available triples from triple store]( https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/metadataQueries/metadataQuery1.rq)
 - [Retrieve all types defined in triple store]( https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/metadataQueries/metadataQuery2.rq)
 - [Retrieve triples which is Subclassof of class]( https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/metadataQueries/metadataQuery3.rq)
 - [Retrieve triples those subject are label]( https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/metadataQueries/metadataQuery4.rq)
