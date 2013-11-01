@@ -1,0 +1,25 @@
+# Retrieve the proteins and their sequence involved in Alzheimer disease
+# Runs on ChEMBL SPARQL endpoint but uses the service of uniprot
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX up:<http://purl.uniprot.org/core/> 
+
+SELECT ?protein  ?disease ?aa
+WHERE {
+  SERVICE <http://beta.sparql.uniprot.org/sparql> {
+  ?protein a up:Protein.
+  ?protein up:sequence ?seq.
+  ?seq rdf:value ?aa.
+  ?protein up:annotation ?annotation .
+  ?annotation up:disease ?dis.
+  ?dis skos:prefLabel ?disease.
+  FILTER regex(?disease ,"Alzheimer", 'i')
+} 
+}
