@@ -36,7 +36,7 @@ I have kept the ChEMBL triple store queries in a folder /Documents/git/ChEMBL-RD
 4. [Retrieve trade name of CHEMBL192 molecule](https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/queries/tradeNameOf192Molecule.rq)
 5. [Retrieve the ChEMBL molecules URI having molecular formula is combination of “C22H30N6O4S”](https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/queries/sourceForMolecularFormula.rq)
 
-### B. Moderate (Need to know more about schema to reach the specific location):
+### B. Moderate (Need to know more about schema to reach the specific location)
 
 1. [Retrieve substance types having target type "cell-line"](https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/queries/substanceTypeToCell-line.rq)
 - [Retrieve target types available in ChEMBL rdf triple store](https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/queries/targetType.rq)
