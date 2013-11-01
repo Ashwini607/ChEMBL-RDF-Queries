@@ -28,7 +28,7 @@ It is also possible to run the queries from R or with command lines. More exampl
 I have kept the ChEMBL triple store queries in a folder /Documents/git/ChEMBL-RDF-queries. We can directly run the query, using terminal but for running on sparql-endpoint of ChEMBL triple store, remove the comment from the query.
 
 
-### Simple SPARQL queries
+### A. Simple SPARQL queries
 
 1. Retrieve ChEMBL molecule from the trade name ("sildenafil"). [File](https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/queries/moleculeSourceForTradeName.rq) or [see it live](http://www.ebi.ac.uk/rdf/services/chembl/sparql?query=PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0APREFIX+owl%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23%3E%0D%0APREFIX+xsd%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23%3E%0D%0APREFIX+dc%3A+%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Felements%2F1.1%2F%3E%0D%0APREFIX+dcterms%3A+%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0D%0APREFIX+dbpedia2%3A+%3Chttp%3A%2F%2Fdbpedia.org%2Fproperty%2F%3E%0D%0APREFIX+dbpedia%3A+%3Chttp%3A%2F%2Fdbpedia.org%2F%3E%0D%0APREFIX+foaf%3A+%3Chttp%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%3E%0D%0APREFIX+skos%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0D%0APREFIX+cco%3A+%3Chttp%3A%2F%2Frdf.ebi.ac.uk%2Fterms%2Fchembl%23%3E%0D%0A%0D%0A%0D%0ASELECT+%3Fmolecule%0D%0AWHERE+{%0D%0A++%3Fmolecule+skos%3AaltLabel+%3Fname.%0D%0A++FILTER+regex%28%3Fname+%2C%22sildenafil%22%2C+%27i%27%29%0D%0A}&render=HTML&limit=100&offset=0#lodestart-sparql-results)
 2. [Retrieve the molecular formula of ChEMBL molecule having ChEMBL-id "CHEMBL192"](https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/queries/molFormulaof192Molecule.rq)
@@ -36,7 +36,7 @@ I have kept the ChEMBL triple store queries in a folder /Documents/git/ChEMBL-RD
 4. [Retrieve trade name of CHEMBL192 molecule](https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/queries/tradeNameOf192Molecule.rq)
 5. [Retrieve the ChEMBL molecules URI having molecular formula is combination of “C22H30N6O4S”](https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/queries/sourceForMolecularFormula.rq)
 
-B. Moderate (Need to know more about schema to reach the specific location):
+### B. Moderate (Need to know more about schema to reach the specific location):
 
 1. [Retrieve substance types having target type "cell-line"](https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/queries/substanceTypeToCell-line.rq)
 - [Retrieve target types available in ChEMBL rdf triple store](https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/queries/targetType.rq)
