@@ -1,7 +1,7 @@
 # Introduction
 
 This repository contains a list of queries illustrating how to use the ChEMBL SPARQL enpoint. If you are new to the
-semantic web, you can [follow a tutorial](). If you have some knowledge about SQL and relational database already, the transition to SPARQL should be easy, first read the introduction below and you can directly get started!
+semantic web, you can [follow a tutorial](http://www.cambridgesemantics.com/semantic-university/introduction-to-the-semantic-web). If you have some knowledge about SQL and relational database already, the transition to SPARQL should be easy, first read the introduction below and you can directly get started!
 
 ### RDF
 
