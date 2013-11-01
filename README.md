@@ -61,7 +61,7 @@ Note: Try to avoid the use of filter function in SPARQL query, because it takes 
 - [Retrieve ChEMBL molecules ChEMBL-ID, activity standard type, activity standard unit having activity standard type "IC50" and standard unit "nM" using filter but two conditions in a single filter]( https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/queries/IC50Compounds_4.rq)
 
 
-# SPARQL query for metadata
+# SPARQL queries for metadata
 
  If you are new in querying RDF triple store then you can try these queries, because these work on any SPARQL endpoint. It will help to get familiar with contains of triple store.  
  
@@ -78,7 +78,7 @@ Note: Try to avoid the use of filter function in SPARQL query, because it takes 
 - [Retrieve the service description of the endpoint]( https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/metadataQueries/serviceDescriptionMetadata.rq )
 
 
-# Fedarated SPARQL query or other than ChEMBL endpoint query
+# Fedarated SPARQL queries or other than ChEMBL endpoint queries
 
 1. [Retrieve known diseases from uniprot](https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/federatedAndOthersEndpointQueries/knownDisUp.rq)
 2. [Retrieve the proteins and their sequence involved in Alzheimer disease (Runs on ChEMBL SPARQL endpoint)](https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/federatedAndOthersEndpointQueries/proteinRelatedToAlzheimerChEMBL_up.rq)
