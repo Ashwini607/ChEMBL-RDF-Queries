@@ -16,6 +16,6 @@ PREFIX cco: <http://rdf.ebi.ac.uk/terms/chembl#>
 
 SELECT ?molecule 
 WHERE {
-  ?molecule skos:altLabel ?name
-  FILTER (?name ,"sildenafil", 'i') .
+  ?molecule skos:altLabel ?name.
+  FILTER (?name ,"sildenafil", 'i') 
 }
