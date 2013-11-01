@@ -27,7 +27,6 @@ It is also possible to run the queries from R or with command lines. More exampl
 
 I have kept the ChEMBL triple store queries in a folder /Documents/git/ChEMBL-RDF-queries. We can directly run the query, using terminal but for running on sparql-endpoint of ChEMBL triple store, remove the comment from the query.
 
-//TODO make links for queries to see on the form
 
 ### Simple SPARQL queries
 
