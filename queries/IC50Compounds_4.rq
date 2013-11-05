@@ -16,13 +16,13 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX cco: <http://rdf.ebi.ac.uk/terms/chembl#>
 
 
-SELECT  ?ChEMBL_id  ?std_value ?std_unit  ?std_type
+SELECT ?ChEMBL_id ?std_value ?std_unit ?std_type
 WHERE {
   ?molecule cco:hasActivity ?Activity.
   ?Activity cco:standardValue ?std_value .
-  ?Activity cco:standardUnits "nM" .
-  ?Activity cco:standardType "IC50" .
+  ?Activity cco:standardUnits ?std_unit .
+  ?Activity cco:standardType ?std_type .
   ?molecule rdfs:label ?ChEMBL_id .
-  FILTER (regex(?std_unit , "nM") && regex(?std_type, "IC50" )).  
+  FILTER (regex(?std_unit , "nM") && regex(?std_type, "IC50" )).
 }
 
