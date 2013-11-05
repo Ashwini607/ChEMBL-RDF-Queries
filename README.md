@@ -80,7 +80,7 @@ Note: Try to avoid the use of filter function in SPARQL query, because it takes 
 
 # Fedarated SPARQL queries or other than ChEMBL endpoint queries
 
-1. [Retrieve known diseases from uniprot](https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/federatedAndOthersEndpointQueries/knownDisUp.rq)
-2. [Retrieve the proteins and their sequence involved in Alzheimer disease (Runs on ChEMBL SPARQL endpoint)](https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/federatedAndOthersEndpointQueries/proteinRelatedToAlzheimerChEMBL_up.rq)
-3. [Retrieve the proteins and their sequence involved in Alzheimer disease (Runs on UniProt SPARQL endpoint)](https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/federatedAndOthersEndpointQueries/proteinsRelatedToAlzheimerUp.rq)
-4. [Retrieve total number of known diseases in uniprot](https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/federatedAndOthersEndpointQueries/totKnownDisUp.rq)
+1. Retrieve known diseases from uniprot. [file](https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/federatedAndOthersEndpointQueries/knownDisUp.rq) or [see it live](http://tinyurl.com/pudqtkl)
+2. Retrieve the proteins and their sequence involved in Alzheimer disease (Runs on ChEMBL SPARQL endpoint). [file](https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/federatedAndOthersEndpointQueries/proteinRelatedToAlzheimerChEMBL_up.rq)or [see it live](http://tinyurl.com/pudqtkl)
+3. Retrieve the proteins and their sequence involved in Alzheimer disease (Runs on UniProt SPARQL endpoint). [file](https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/federatedAndOthersEndpointQueries/proteinsRelatedToAlzheimerUp.rq)or [see it live](http://tinyurl.com/nfnw6yx)
+4. Retrieve total number of known diseases in uniprot. [file](https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/federatedAndOthersEndpointQueries/totKnownDisUp.rq)or [see it live](http://tinyurl.com/pnhmoto)
