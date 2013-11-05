@@ -13,7 +13,7 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX cco: <http://rdf.ebi.ac.uk/terms/chembl#>
 
 
-SELECT ?molecule 
+SELECT DISTINCT ?molecule 
 WHERE {
   ?molecule rdfs:subClassOf cco:Substance.
   ?molecule cco:hasActivity ?act.
