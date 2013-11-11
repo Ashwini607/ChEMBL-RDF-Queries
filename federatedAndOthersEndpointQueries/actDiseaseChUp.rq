@@ -12,7 +12,7 @@ PREFIX cco: <http://rdf.ebi.ac.uk/terms/chembl#>
 
 PREFIX up:<http://purl.uniprot.org/core/> 
 
-SELECT DISTINCT ?protein ?act ?std_value ?std_unit ?aa
+SELECT DISTINCT ?protein ?act ?std_value ?std_unit
 WHERE {
       ?molecule cco:hasActivity ?act.
       OPTIONAL{ ?act cco:standardValue ?std_value ;
