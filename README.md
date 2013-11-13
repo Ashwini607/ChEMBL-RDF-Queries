@@ -41,7 +41,7 @@ I have kept the ChEMBL triple store queries in a folder /Documents/git/ChEMBL-RD
 
 1. Retrieve substance types having target type "cell-line". [file](https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/queries/substanceTypeToCell-line.rq) or [see it live](http://tinyurl.com/qh7shqb)
 - Retrieve target types available in ChEMBL rdf triple store. [file](https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/queries/targetType.rq) or [see it live](http://tinyurl.com/p5ranmk)
-- Retrieve compound activity details for all target. [file]( https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/queries/compoundActDetails.rq) or [see it live](http://tinyurl.com/ovrz72n)
+- Retrieve compound activity details for all target. [file]( https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/queries/compoundActDetails.rq) or [see it live](http://tinyurl.com/of6eybt)
 - Retrieve all the bioactive ChEMBL molecules for bacterial target. [file]( https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/queries/bacterialTargetData.rq) or [see it live](http://tinyurl.com/q2rrzma)
 - Retrieve ChEMBL molecules targeting “Firefly Luciferase”. [file]( https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/queries/compoundToFirLuciferase.rq) or [see it live](http://tinyurl.com/pbvfjyu)
 - Retrieve target details, uniprot_reference and sequences for proteins target. [file]( https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/queries/compoundDetailsForProteinTar.rq)or [see it live](http://tinyurl.com/nv9lqyl)
