@@ -13,16 +13,16 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX cco: <http://rdf.ebi.ac.uk/terms/chembl#>
 
 
-SELECT ?ChEMBL_id ?std_value ?std_unit ?std_type ?std_rel ?ass_disc
+SELECT ?ChEMBL_id ?std_type ?std_rel ?std_value ?std_unit  ?ass_disc
 WHERE {
-  ?molecule cco:hasActivity ?act.
   ?molecule rdfs:subClassOf cco:Substance. 
   ?molecule rdfs:label ?ChEMBL_id .
-  ?act cco:hasAssay ?ass.
-  ?act cco:standardValue ?std_value .
-  ?act cco:standardUnits ?std_unit .
+  ?molecule cco:hasActivity ?act.
   ?act cco:standardType ?std_type .
   ?act cco:standardRelation ?std_rel.
+  ?act cco:standardValue ?std_value .
+  ?act cco:standardUnits ?std_unit .
+  ?act cco:hasAssay ?ass.
   ?ass dcterms:description ?ass_disc.
   ?ass cco:hasTarget ?tar.
   ?tar rdfs:label ?tar_id .
