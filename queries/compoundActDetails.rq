@@ -18,10 +18,10 @@ WHERE {
   ?molecule rdfs:subClassOf cco:Substance. 
   ?molecule rdfs:label ?ChEMBL_id .
   ?molecule cco:hasActivity ?act.
-  ?act cco:standardType ?std_type .
-  ?act cco:standardRelation ?std_rel.
-  ?act cco:standardValue ?std_value .
-  ?act cco:standardUnits ?std_unit .
+  OPTIONAL{ ?act cco:standardType ?std_type ;
+                 cco:standardRelation ?std_rel;
+                 cco:standardValue ?std_value ;
+                 cco:standardUnits ?std_unit .}
   ?act cco:hasAssay ?ass.
   ?ass dcterms:description ?ass_disc.
   ?ass cco:hasTarget ?tar.
