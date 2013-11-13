@@ -1,4 +1,4 @@
-# Retrieve the service description of the endpoint
+# Retrieve the service description of the endpoint. Here endpoint is "UniProt".
 # Run it on terminal
 
 curl --header "Accept:application/rdf+xml" "http://beta.sparql.uniprot.org"
