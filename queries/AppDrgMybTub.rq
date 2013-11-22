@@ -1,0 +1,22 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX cco: <http://rdf.ebi.ac.uk/terms/chembl#>
+
+SELECT distinct ?label  
+WHERE {
+  ?molecule rdfs:subClassOf cco:Substance.
+  ?molecule cco:highestDevelopmentPhase "4"^^xsd:integer.
+  ?molecule skos:prefLabel ?label.
+  ?molecule cco:hasActivity ?act.  
+  ?act cco:hasAssay ?ass.
+  ?ass cco:hasTarget ?tar.
+  ?tar cco:targetType "SINGLE PROTEIN".
+  ?tar cco:organismName "Mycobacterium tuberculosis".
+  ?tar cco:hasTargetComponent ?tc.
+  ?tc skos:exactMatch ?dbXref .
+  
+} ORDER by ?label
+
