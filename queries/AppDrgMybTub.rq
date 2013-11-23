@@ -8,11 +8,11 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX cco: <http://rdf.ebi.ac.uk/terms/chembl#>
 
 
-SELECT DISTINCT ?label  
+SELECT DISTINCT ?drug  
 WHERE{
   ?molecule rdfs:subClassOf cco:Substance.
   ?molecule cco:highestDevelopmentPhase "4"^^xsd:integer.
-  ?molecule skos:prefLabel ?label.
+  ?molecule skos:prefLabel ?drug.
   ?molecule cco:hasActivity ?act.  
   ?act cco:hasAssay ?ass.
   ?ass cco:hasTarget ?tar.
@@ -20,5 +20,5 @@ WHERE{
   ?tar cco:organismName "Mycobacterium tuberculosis".
   ?tar cco:hasTargetComponent ?tc.
   ?tc skos:exactMatch ?dbXref .
-} ORDER by ?label
+} ORDER by ?drug
 
