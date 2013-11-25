@@ -1,0 +1,35 @@
+#Retrieve active pathway of proteins involved in Alzheimer disease
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX cco: <http://rdf.ebi.ac.uk/terms/chembl#>
+PREFIX biopax3:<http://www.biopax.org/release/biopax-level3.owl#>
+PREFIX up:<http://purl.uniprot.org/core/> 
+
+
+SELECT distinct ?molecule ?protein ?disease ?pathwayname
+WHERE {
+  SERVICE <http://beta.sparql.uniprot.org/sparql> { 
+  ?dbXref a up:Protein.
+  ?dbXref  up:annotation ?annotation . 
+  ?annotation a up:Disease_Annotation .
+  ?annotation up:disease ?dis.
+  ?dis skos:prefLabel ?disease.
+  FILTER regex(?disease ,"Alzheimer", 'i')
+ }
+  SERVICE <http://www.ebi.ac.uk/rdf/services/reactome/sparql> {
+  ?protein rdf:type biopax3:Protein .
+  ?protein biopax3:memberPhysicalEntity [biopax3:entityReference ?dbXref ] .
+  ?pathway biopax3:displayName ?pathwayname .
+  ?pathway biopax3:pathwayComponent ?reaction .
+  ?reaction ?rel ?protein
+  }
+} 
