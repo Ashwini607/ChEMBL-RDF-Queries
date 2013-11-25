@@ -13,7 +13,7 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX cco: <http://rdf.ebi.ac.uk/terms/chembl#>
 PREFIX up:<http://purl.uniprot.org/core/>
 
-SELECT DISTINCT ?protein ?act ?std_value ?std_unit
+SELECT DISTINCT ?protein ?std_type ?std_rel ?act ?std_value ?std_unit
 WHERE {
    SERVICE <http://beta.sparql.uniprot.org/sparql> {
    ?protein a up:Protein.
