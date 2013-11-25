@@ -1,0 +1,36 @@
+# Retrieve location of Mycobacterium tuberculosis protein which is targeted by ChEMBL molecules 
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX cco: <http://rdf.ebi.ac.uk/terms/chembl#>
+PREFIX biopax3:<http://www.biopax.org/release/biopax-level3.owl#>
+PREFIX up:<http://purl.uniprot.org/core/> 
+
+SELECT distinct ?label ?protein ?location_inside_cell
+WHERE {
+  ?molecule rdfs:subClassOf cco:Substance.
+  ?molecule skos:prefLabel ?label.
+  ?molecule cco:hasActivity ?act.  
+  ?act cco:hasAssay ?ass.
+  ?ass cco:hasTarget ?tar.
+  ?tar cco:targetType "SINGLE PROTEIN".
+  ?tar cco:organismName "Mycobacterium tuberculosis".
+  ?tar cco:hasTargetComponent ?tc.
+  ?tc skos:exactMatch ?protein .
+  
+  SERVICE <http://beta.sparql.uniprot.org/sparql> {
+    ?protein a up:Protein .
+    ?protein up:annotation ?annotation .
+    ?annotation up:locatedIn ?locin.
+    ?locin up:cellularComponent ?cellcmpt.
+    ?cellcmpt skos:prefLabel ?location_inside_cell.
+}
+} 
