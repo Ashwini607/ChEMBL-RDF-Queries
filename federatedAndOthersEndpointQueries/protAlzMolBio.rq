@@ -1,0 +1,37 @@
+# Molecular function and biological function of all protein at a time do not retrieve but 
+# it works for a set of protein like here for proteins involved in Alzheimer disease.
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX up:<http://purl.uniprot.org/core/>
+
+
+SELECT ?protein  ?disease  ?goTerm ?label ?type
+WHERE {
+  ?protein a up:Protein.
+  ?protein up:annotation ?annotation .
+  ?annotation up:disease ?dis.
+  ?dis skos:prefLabel ?disease.
+  FILTER regex(?disease ,"Alzheimer", 'i')
+  ?protein up:classifiedWith ?goTerm .
+  #Determine if the type is biological_process
+  OPTIONAL {
+  ?goTerm rdfs:subClassOf+ <http://purl.uniprot.org/go/0008150>
+  BIND ("biological_process" AS ?type)
+ }
+  #Determine if the type is molecular_function
+  OPTIONAL {
+  ?goTerm rdfs:subClassOf+ <http://purl.uniprot.org/go/0003674>
+  BIND ("molecular_function " AS ?type)
+ }
+  #get the preferred label for a go term
+  ?goTerm skos:prefLabel ?label .
+  #Filter out the uniprot keywords
+  FILTER(bound(?type))
+}
