@@ -1,0 +1,41 @@
+# Retrieve pathway of Mycobacterium tuberculosis protein which is targeted by ChEMBL molecules
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX cco: <http://rdf.ebi.ac.uk/terms/chembl#>
+PREFIX biopax3:<http://www.biopax.org/release/biopax-level3.owl#>
+
+
+SELECT distinct ?ChEMBL_id ?protein ?org ?pathwayname
+WHERE {
+  ?molecule cco:hasActivity ?act.
+  OPTIONAL{?act cco:standardType ?std_type;
+                cco:standardRelation ?std_rel;
+                cco:standardValue ?std_value ;
+                cco:standardUnits ?std_unit .}
+                 
+  ?molecule rdfs:subClassOf cco:Substance.
+  ?molecule rdfs:label ?ChEMBL_id.
+  ?molecule cco:substanceType "Small molecule".
+  ?act cco:hasAssay ?ass.
+  ?ass cco:hasTarget ?tar.
+  ?tar cco:targetType "SINGLE PROTEIN".
+  ?tar cco:organismName "Mycobacterium tuberculosis".
+  ?tar cco:hasTargetComponent ?tc.
+  ?tc skos:exactMatch ?dbXrefProt.
+  SERVICE <http://www.ebi.ac.uk/rdf/services/reactome/sparql> {
+    ?protein rdf:type biopax3:Protein .
+    ?protein biopax3:memberPhysicalEntity [biopax3:entityReference ?dbXrefProt] .
+    ?pathway biopax3:displayName ?pathwayname .
+    ?pathway biopax3:pathwayComponent ?reaction .
+    ?reaction ?rel ?protein
+}
+}
