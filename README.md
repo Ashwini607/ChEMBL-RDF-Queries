@@ -57,7 +57,7 @@ Note: Try to avoid the use of FILTER construct in SPARQL query, because it takes
 
 # SPARQL queries for metadata
 
- If you are new in querying RDF triple store then you can try these queries, because these work on any SPARQL endpoint. It will help to get familiar with contains of triple store.  
+ If you are new for a RDF triple store then you can start with these metadata queries. Because these queries work on any SPARQL endpoint. It will help you to explore the unfamiliar triple store.  
  
 1. [Retrieve all available triples from triple store]( https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/metadataQueries/metadataQuery1.rq)
 - [Retrieve types defined in triple store]( https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/metadataQueries/metadataQuery2.rq)
