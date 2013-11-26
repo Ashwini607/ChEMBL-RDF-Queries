@@ -15,16 +15,15 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX cco: <http://rdf.ebi.ac.uk/terms/chembl#>
 
 
-SELECT ?ChEMBL_id ?std_value ?std_unit ?std_type ?std_rel ?ass_disc
+SELECT ?ChEMBL_id ?std_type ?std_rel ?std_value ?std_unit  ?ass_disc 
 WHERE {
-  ?molecule cco:hasActivity ?act. 
+  ?molecule cco:hasActivity ?act.
   ?molecule rdfs:label ?ChEMBL_id .
   ?act cco:hasAssay ?ass.
-  OPTIONAL{?act cco:standardValue ?std_value .}
-  OPTIONAL{?act cco:standardUnits ?std_unit .}
   OPTIONAL{?act cco:standardType ?std_type .}
   OPTIONAL{?act cco:standardRelation ?std_rel.}
+  OPTIONAL{?act cco:standardValue ?std_value .}
+  OPTIONAL{?act cco:standardUnits ?std_unit .}
   ?ass dcterms:description ?ass_disc.
-  ?ass cco:hasTarget ?tar.
-  ?tar rdfs:label ?tar_id .
+  ?ass cco:hasTarget <http://rdf.ebi.ac.uk/resource/chembl/target/CHEMBL1827>.
 }
