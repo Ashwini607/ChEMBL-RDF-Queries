@@ -14,5 +14,5 @@ PREFIX cco: <http://rdf.ebi.ac.uk/terms/chembl#>
 SELECT DISTINCT ?organism
 WHERE {
   ?tar rdfs:subClassOf cco:Target.
-  ?tar cco:organism ?organism. 
+  ?tar cco:organismName ?organism. 
 }
