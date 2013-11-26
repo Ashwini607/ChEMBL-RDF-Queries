@@ -51,6 +51,20 @@ It is also possible to run the queries from R or with command lines. More exampl
 
 Note: Try to avoid the use of FILTER construct in SPARQL query, because it takes more time in execution.
 
+# ChEMBL federated or others endpoint service related SPARQL queries 
+
+### Execute on ChEMBL SPARQL endpoint
+1. Retrieve location of Mycobacterium tuberculosis proteins which is targeted by ChEMBL molecules. [file](https://github.com/Ashwini607/ChEMBL-RDF-Queries/blob/master/federatedAndOthersEndpointQueries/locMycTubProtComp.rq) or [see it live](http://tinyurl.com/o5f9mcd)
+2. Retrieve pathway of Mycobacterium tuberculosis proteins which is targeted by ChEMBL molecules. [file](https://github.com/Ashwini607/ChEMBL-RDF-Queries/blob/master/federatedAndOthersEndpointQueries/pathMycTubProtComp.rq) or [see it live](http://tinyurl.com/qa2hyln)
+3. Retrieve the proteins and their sequence involved in Alzheimer disease. [file](https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/federatedAndOthersEndpointQueries/proteinRelatedToAlzheimerChEMBL_up.rq) or [see it live](http://tinyurl.com/q6bvutv)
+4. Retrieve activities of proteins involved in Alzheimer disease. [file](https://github.com/Ashwini607/ChEMBL-RDF-Queries/blob/master/federatedAndOthersEndpointQueries/actAlz.rq) or [see it live](http://tinyurl.com/nbhj9do) 
+5. Retrieve active pathway of proteins involved in Alzheimer disease. [file](https://github.com/Ashwini607/ChEMBL-RDF-Queries/blob/master/federatedAndOthersEndpointQueries/pathAlzProt.rq) or [see it live](http://tinyurl.com/ove9vy6) 
+
+### Execute on UniProt endpoint
+1. Retrieve known diseases from uniprot. [file](https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/federatedAndOthersEndpointQueries/knownDisUp.rq) or [see it live](http://tinyurl.com/pudqtkl)
+2. Retrieve total number of known diseases in uniprot. [file](https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/federatedAndOthersEndpointQueries/totKnownDisUp.rq) or [see it live](http://tinyurl.com/pnhmoto)
+3. Retrieve the proteins and their sequence involved in Alzheimer disease. [file](https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/federatedAndOthersEndpointQueries/proteinsRelatedToAlzheimerUp.rq) or [see it live](http://tinyurl.com/nfnw6yx)
+4. Retrieve molecular function and biological process associated with Alzheimer disease proteins. [file](https://github.com/Ashwini607/ChEMBL-RDF-Queries/blob/master/federatedAndOthersEndpointQueries/protAlzMolBio.rq) or [see it live](http://tinyurl.com/qcxtprt) 
 
 # SPARQL queries for metadata
 
@@ -69,17 +83,3 @@ Note: Try to avoid the use of FILTER construct in SPARQL query, because it takes
 - [Retrieve the service description of the endpoint]( https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/metadataQueries/serviceDescriptionMetadata.rq )
 
 
-# ChEMBL federated or others endpoint service related SPARQL queries 
-
-### Execute on ChEMBL SPARQL endpoint
-1. Retrieve location of Mycobacterium tuberculosis proteins which is targeted by ChEMBL molecules. [file](https://github.com/Ashwini607/ChEMBL-RDF-Queries/blob/master/federatedAndOthersEndpointQueries/locMycTubProtComp.rq) or [see it live](http://tinyurl.com/o5f9mcd)
-2. Retrieve pathway of Mycobacterium tuberculosis proteins which is targeted by ChEMBL molecules. [file](https://github.com/Ashwini607/ChEMBL-RDF-Queries/blob/master/federatedAndOthersEndpointQueries/pathMycTubProtComp.rq) or [see it live](http://tinyurl.com/qa2hyln)
-3. Retrieve the proteins and their sequence involved in Alzheimer disease. [file](https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/federatedAndOthersEndpointQueries/proteinRelatedToAlzheimerChEMBL_up.rq) or [see it live](http://tinyurl.com/q6bvutv)
-4. Retrieve activities of proteins involved in Alzheimer disease. [file](https://github.com/Ashwini607/ChEMBL-RDF-Queries/blob/master/federatedAndOthersEndpointQueries/actAlz.rq) or [see it live](http://tinyurl.com/nbhj9do) 
-5. Retrieve active pathway of proteins involved in Alzheimer disease. [file](https://github.com/Ashwini607/ChEMBL-RDF-Queries/blob/master/federatedAndOthersEndpointQueries/pathAlzProt.rq) or [see it live](http://tinyurl.com/ove9vy6) 
-
-### Execute on UniProt endpoint
-1. Retrieve known diseases from uniprot. [file](https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/federatedAndOthersEndpointQueries/knownDisUp.rq) or [see it live](http://tinyurl.com/pudqtkl)
-2. Retrieve total number of known diseases in uniprot. [file](https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/federatedAndOthersEndpointQueries/totKnownDisUp.rq) or [see it live](http://tinyurl.com/pnhmoto)
-3. Retrieve the proteins and their sequence involved in Alzheimer disease. [file](https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/federatedAndOthersEndpointQueries/proteinsRelatedToAlzheimerUp.rq) or [see it live](http://tinyurl.com/nfnw6yx)
-4. Retrieve molecular function and biological process associated with Alzheimer disease proteins. [file](https://github.com/Ashwini607/ChEMBL-RDF-Queries/blob/master/federatedAndOthersEndpointQueries/protAlzMolBio.rq) or [see it live](http://tinyurl.com/qcxtprt) 
