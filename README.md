@@ -23,6 +23,8 @@ You can directly copy and paste the queries from the files in the web form on th
 
 It is also possible to run the queries from R or with command lines. More examples will come to demonstrate this feature. Finally, you can also [check the ChEMBL endpoint documentation](http://www.ebi.ac.uk/rdf/services/chembl/sparql) or [contact us](http://www.ebi.ac.uk/rdf/documentation/chembl) if you are facing problems.
 
+To learn more about sparql query, you can look on web at http://www.w3.org/TR/sparql11-query/
+
 # SPARQL queries to execute on ChEMBL SPARQL endpoint
 
 ### A. Simple queries
