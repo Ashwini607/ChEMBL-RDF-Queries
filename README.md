@@ -84,5 +84,5 @@ Note: Try to avoid the use of FILTER construct in SPARQL query, because it takes
 ### Execute on UniProt endpoint
 1. Retrieve known diseases from uniprot. [file](https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/federatedAndOthersEndpointQueries/knownDisUp.rq) or [see it live](http://tinyurl.com/pudqtkl)
 2. Retrieve total number of known diseases in uniprot. [file](https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/federatedAndOthersEndpointQueries/totKnownDisUp.rq) or [see it live](http://tinyurl.com/pnhmoto)
-3. Retrieve the proteins and their sequence involved in Alzheimer disease ]. [file](https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/federatedAndOthersEndpointQueries/proteinsRelatedToAlzheimerUp.rq) or [see it live](http://tinyurl.com/nfnw6yx)
+3. Retrieve the proteins and their sequence involved in Alzheimer disease. [file](https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/federatedAndOthersEndpointQueries/proteinsRelatedToAlzheimerUp.rq) or [see it live](http://tinyurl.com/nfnw6yx)
 4. Retrieve molecular function and biological process associated with Alzheimer disease proteins. [file](https://github.com/Ashwini607/ChEMBL-RDF-Queries/blob/master/federatedAndOthersEndpointQueries/protAlzMolBio.rq) or [see it live](http://tinyurl.com/qcxtprt) 
