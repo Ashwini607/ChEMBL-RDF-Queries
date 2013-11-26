@@ -14,11 +14,11 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX cco: <http://rdf.ebi.ac.uk/terms/chembl#>
 
 
-SELECT  ?ChEMBL_id  ?std_value
+SELECT  ?ChEMBL_id
 WHERE {
-  ?molecule cco:hasActivity ?Activity.
-  ?Activity cco:standardValue ?std_value .
-  ?Activity cco:standardUnits "nM" .
-  ?Activity cco:standardType "IC50" .
-  ?molecule rdfs:label ?ChEMBL_id .  
+  ?molecule rdfs:subClassOf cco:Substance.
+  ?molecule rdfs:label ?ChEMBL_id .
+  ?molecule cco:hasActivity ?Act.
+  ?Act cco:standardUnits "nM" .
+  ?Act cco:standardType "IC50" .
 }
