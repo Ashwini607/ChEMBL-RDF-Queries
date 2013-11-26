@@ -56,8 +56,8 @@ new column having constant text "IC50" without filter. These differences make ch
 
 Note: Try to avoid the use of filter function in SPARQL query, because it takes more time for running.
 
-1. Retrieve ChEMBL molecules ChEMBL-ID, activity standard type, activity standard unit having activity standard type "IC50" and standard unit "nM" using filter. [file]( https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/queries/IC50Compounds.rq) or [see it live](http://tinyurl.com/pdx3wtu)
-- Retrieve ChEMBL molecules ChEMBL-ID having activity standard type "IC50" and activity standard unit "nM". [file](https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/queries/IC50Compounds_1.rq) or [see it live](http://tinyurl.com/ofgcxxy)
+1. - Retrieve ChEMBL molecules ChEMBL-ID having activity standard type "IC50" and activity standard unit "nM". [file](https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/queries/IC50Compounds_1.rq) or [see it live](http://tinyurl.com/ofgcxxy)
+- Retrieve ChEMBL molecules ChEMBL-ID, activity standard type, activity standard unit having activity standard type "IC50" and standard unit "nM" using filter. [file]( https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/queries/IC50Compounds.rq) or [see it live](http://tinyurl.com/pdx3wtu)
 - Retrieve ChEMBL molecules ChEMBL-ID having activity standard type "IC50" and activity standard unit "nM" having extra columns with variable name that contain constant text about standard type and standard unit. [file](https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/queries/IC50Compounds_2.rq) or [see it live](http://tinyurl.com/nhjm8wb)
 - Retrieve ChEMBL molecules ChEMBL-ID having activity standard type "IC50" and activity standard unit "nM" having extra columns that contains constant text about standard type and standard unit. [file](https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/queries/IC50Compounds_3.rq) or [see it live](http://tinyurl.com/qx2g35g)
 - Retrieve ChEMBL molecules ChEMBL-ID, activity standard type, activity standard unit having activity standard type "IC50" and standard unit "nM" using filter but two conditions in a single filter. [file]( https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/queries/IC50Compounds_4.rq) or [see it live](http://tinyurl.com/p5utb9n)
@@ -68,15 +68,15 @@ Note: Try to avoid the use of filter function in SPARQL query, because it takes 
  If you are new in querying RDF triple store then you can try these queries, because these work on any SPARQL endpoint. It will help to get familiar with contains of triple store.  
  
 1. [Retrieve all available triples from triple store]( https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/metadataQueries/metadataQuery1.rq)
-- [Retrieve all types defined in triple store]( https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/metadataQueries/metadataQuery2.rq)
-- [Retrieve triples which is Subclassof of class]( https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/metadataQueries/metadataQuery3.rq)
-- [Retrieve triples those subject are label]( https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/metadataQueries/metadataQuery4.rq)
+- [Retrieve types defined in triple store]( https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/metadataQueries/metadataQuery2.rq)
+- [Retrieve properties defined in triple store]( https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/metadataQueries/propertiesMetadata.rq)
+- [Retrieve values has been associated with given property]( https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/metadataQueries/propertyValuesMetadata.rq)
+- [Retrieve triples where subjects are label]( https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/metadataQueries/metadataQuery4.rq)
 - [Retrive all declared classes]( https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/metadataQueries/allclassesMetadata.rq)
+- [Retrieve triples which is subClassOf of class]( https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/metadataQueries/metadataQuery3.rq)
 - [Retrieve properties have been associated for a given class]( https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/metadataQueries/classPropertiesMetadata.rq)
 - [Retrieve subclasses descendants of a given class]( https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/metadataQueries/descendatsClassesMetadata.rq)
 - [Retrieve the relation with source (URI)]( https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/metadataQueries/describeMetadata.rq)
-- [Retrieve the properties]( https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/metadataQueries/propertiesMetadata.rq)
-- [Retrieve values has been associated with given property]( https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/metadataQueries/propertyValuesMetadata.rq)
 - [Retrieve the service description of the endpoint]( https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/metadataQueries/serviceDescriptionMetadata.rq )
 
 
