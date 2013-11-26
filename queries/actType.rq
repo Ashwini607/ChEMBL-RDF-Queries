@@ -13,6 +13,6 @@ PREFIX cco: <http://rdf.ebi.ac.uk/terms/chembl#>
 
 SELECT DISTINCT ?activityType 
 WHERE {
-  ?act rdfs:subClassOf cco:Activity.
+  ?act a cco:Activity.
   ?act cco:standardType ?activityType. 
 }
