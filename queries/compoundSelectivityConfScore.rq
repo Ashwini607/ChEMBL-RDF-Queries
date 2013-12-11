@@ -1,0 +1,46 @@
+# Retrieve ChEMBL molecules which are selective for Human CDK2 (ChEMBL301) over Human CDK5 (CHEMBL4036)
+# selectivity is based on comparing binding affinities using IC50 values.
+# considering confidence score is more than 7. The confidence score value reflects both the type of target
+# assigned to a particular assay and the confidence that the target assigned is the correct target for that assay.
+# The confidence scores range from 0, for as yet uncurated data entries, to 9, where a single protein target has been 
+# assigned a high degree of confidence. Assays assigned a non-molecular target type, for example a cell-line or an 
+# organism, receive a confidence score of 1, while assays with assigned protein targets receive a confidence score 
+# of at least 4.
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX cco: <http://rdf.ebi.ac.uk/terms/chembl#>
+PREFIX bibo: <http://purl.org/ontology/bibo/>
+PREFIX target: <http://rdf.ebi.ac.uk/resource/chembl/target/> 
+
+
+SELECT DISTINCT ?molecule
+WHERE{
+  ?molecule rdfs:subClassOf cco:Substance.
+  ?molecule cco:hasActivity ?activity1.                              
+  ?activity1 cco:hasAssay ?assay1;
+             cco:standardType "IC50";
+             cco:standardUnits "nM";
+             cco:standardRelation "=";
+             cco:standardValue ?value1.
+  ?assay1 cco:hasTarget target:CHEMBL301.
+  ?assay1 cco:targetConfScore ?confScore.
+  FILTER ( ?value1 < 50 ) .
+    
+  ?molecule rdfs:subClassOf cco:Substance.
+  ?molecule cco:hasActivity ?activity2.                              
+  ?activity2 cco:hasAssay ?assay2;
+           cco:standardType "IC50";
+           cco:standardUnits "nM";
+           cco:standardRelation "=";
+           cco:standardValue ?value2.
+  ?assay2 cco:hasTarget target:CHEMBL4036.
+  ?assay2 cco:targetConfScore ?confScore.
+  FILTER ( ?value2 > 200 ) .   
+  
+  FILTER (?confScore > 7)
+}
