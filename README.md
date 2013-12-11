@@ -59,7 +59,7 @@ Note: To learn more about sparql query language, you can look on web at http://w
 
 1. Retrieve ChEMBL molecules which are selective for Human CDK2 (ChEMBL301) over Human CDK5 (CHEMBL4036). [file](https://github.com/Ashwini607/ChEMBL-RDF-Queries/blob/master/queries/compoundSelectivity.rq) or [see it live](http://tinyurl.com/q3s8fme)
 
-Note: Try to avoid the use of FILTER construct in SPARQL query, because it takes more time in execution.
+#### Note: Try to avoid the use of FILTER construct in SPARQL query, because it takes more time in execution.
 
 # ChEMBL federated or others endpoint service related SPARQL queries 
 
