@@ -71,7 +71,7 @@ Note: To learn more about SPARQL query language, you can look on web at http://w
 4. Retrieve activities of proteins involved in Alzheimer disease. [file](https://github.com/Ashwini607/ChEMBL-RDF-Queries/blob/master/federatedAndOthersEndpointQueries/actAlz.rq) or [see it live](http://tinyurl.com/nbhj9do) 
 5. Retrieve active pathway of proteins involved in Alzheimer disease. [file](https://github.com/Ashwini607/ChEMBL-RDF-Queries/blob/master/federatedAndOthersEndpointQueries/pathAlzProt.rq) or [see it live](http://tinyurl.com/ove9vy6) 
 
-### Execute on UniProt endpoint
+### Execute on UniProt SPARQL endpoint
 1. Retrieve known diseases from uniprot. [file](https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/federatedAndOthersEndpointQueries/knownDisUp.rq) or [see it live](http://tinyurl.com/pudqtkl)
 2. Retrieve total number of known diseases in uniprot. [file](https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/federatedAndOthersEndpointQueries/totKnownDisUp.rq) or [see it live](http://tinyurl.com/pnhmoto)
 3. Retrieve the proteins and their sequence involved in Alzheimer disease. [file](https://github.com/Ashwini607/ChEMBL-RDF-Queries/tree/master/federatedAndOthersEndpointQueries/proteinsRelatedToAlzheimerUp.rq) or [see it live](http://tinyurl.com/nfnw6yx)
