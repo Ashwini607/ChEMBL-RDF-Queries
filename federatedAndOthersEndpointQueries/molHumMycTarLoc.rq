@@ -1,0 +1,44 @@
+# Retrieve same compound targeting different proteins in Mycobacterium tuberculosis and homo sapiens
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX cco: <http://rdf.ebi.ac.uk/terms/chembl#>
+PREFIX up:<http://purl.uniprot.org/core/>
+
+
+SELECT ?molecule ?protein1 ?location_inside_cell1 ?protein2 ?location_inside_cell2
+WHERE{
+  ?molecule rdfs:subClassOf cco:Substance.
+  ?molecule cco:hasActivity ?activity1.                              
+  ?activity1 cco:hasAssay ?assay1.
+  ?assay1 cco:hasTarget ?target1.
+  ?target1 cco:organismName "Mycobacterium tuberculosis".
+  ?target1 cco:hasTargetComponent ?targetcomponent.
+  ?targetcomponent skos:exactMatch ?protein1.
+  SERVICE <http://beta.sparql.uniprot.org/sparql> {
+    ?protein1 a up:Protein .
+    ?protein1 up:annotation ?annotation1 .
+    ?annotation1 up:locatedIn ?locin1.
+    ?locin1 up:cellularComponent ?cellcmpt1.
+    ?cellcmpt1 skos:prefLabel ?location_inside_cell1.
+}  
+  ?molecule rdfs:subClassOf cco:Substance.
+  ?molecule cco:hasActivity ?activity2.                              
+  ?activity2 cco:hasAssay ?assay2.
+  ?assay2 cco:hasTarget ?target2.
+  ?target2 cco:organismName "Homo sapiens".
+  ?target2 cco:hasTargetComponent ?targetcomponent2.
+  ?targetcomponent2 skos:exactMatch ?protein2.  
+  SERVICE <http://beta.sparql.uniprot.org/sparql> {
+    ?protein2 a up:Protein .
+    ?protein2 up:annotation ?annotation2 .
+    ?annotation2 up:locatedIn ?locin2.
+    ?locin2 up:cellularComponent ?cellcmpt2.
+    ?cellcmpt2 skos:prefLabel ?location_inside_cell2.
+}          
+}

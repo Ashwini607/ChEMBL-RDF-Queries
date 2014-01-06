@@ -1,0 +1,27 @@
+# Retrieve Alzheimer disease proteins involved in others disease.
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX up:<http://purl.uniprot.org/core/> 
+ 
+ 
+SELECT DISTINCT  ?protein ?disease ?disease1
+WHERE{
+   SERVICE <http://beta.sparql.uniprot.org/sparql> {
+   ?protein a up:Protein.
+   ?protein up:annotation ?annotation .
+   ?annotation a up:Disease_Annotation .
+   ?annotation up:disease ?dis.
+   ?dis skos:prefLabel ?disease.
+   FILTER regex(?disease ,"Alzheimer", 'i')
+   
+   ?protein a up:Protein.
+   ?protein up:annotation ?annotation1 .
+   ?annotation1 a up:Disease_Annotation .
+   ?annotation1 up:disease ?dis1.
+   ?dis1 skos:prefLabel ?disease1.
+   FILTER(!( regex(?disease1 ,"Alzheimer", 'i')))                  
+}                   
+} 
