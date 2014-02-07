@@ -19,11 +19,10 @@ Secondly, it becomes easier to integrate the data from another provider. For ins
 
 ### How do I run the ChEMBL queries?
 
-You can directly copy and paste the queries from the files in the web form on the [SPARQL endpoint](http://www.ebi.ac.uk/rdf/services/chembl/sparql). Do not include the commented lines, starting with the symbol `#` in very first line of query, the endpoint does not support them yet. You can put it from 2nd line.
+You can directly copy and paste the queries from the files in the web form on the [SPARQL endpoint](http://www.ebi.ac.uk/rdf/services/chembl/sparql). Do not include the commented (starting with the symbol `#`) in the very first line of a query, the endpoint does not support them yet. You can put the comment from 2nd line onwards.
 
 It is also possible to run the queries from R or with command lines. More examples will come to demonstrate this feature. Finally, you can also [check the ChEMBL endpoint documentation](http://www.ebi.ac.uk/rdf/services/chembl/sparql) or [contact us](http://www.ebi.ac.uk/rdf/documentation/chembl) if you are facing problems.
 
-Note: To learn more about SPARQL query language, you can look on web at http://www.w3.org/TR/sparql11-query
 
 # SPARQL queries to execute on ChEMBL SPARQL endpoint
 
